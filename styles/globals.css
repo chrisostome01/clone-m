@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bg-centered {
+  background-position: 33% center;
+}
+
