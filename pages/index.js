@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Inter } from "@next/font/google";
 import Card from "../components/ui/Card";
 import Footer from "../components/ui/Footer";
@@ -9,7 +10,21 @@ export default function Home() {
     <>
       {/* start: header */}
       <header className="bg-[url('/buehne_startseite.svg')] min-h-screen md:bg-cover bg-centered bg-no-repeat">
-        <nav className="bg-[#c30a17] text-white relative w-full flex h-[3.25rem] gap-[1rem] px-2">
+        <nav className="bg-white text-white relative w-full hidden lg:flex justify-end h-[3.25rem] gap-[1rem] px-2">
+          {/* nav item */}
+          <div className="flex gap-[1rem] items-center  tracking-[.5px] px-[1.25rem] py-[0.25rem]">
+            <span className="text-[#3a3e41]">Newsroom</span>
+          </div>
+          {/* nav item */}
+          <div className="flex gap-[1rem] items-center  tracking-[.5px] px-[1.25rem] py-[0.25rem]">
+            <span className="text-[#3a3e41]">Contact</span>
+          </div>
+          {/* nav item */}
+          <div className="flex gap-[1rem] items-center  tracking-[.5px] px-[1.25rem] py-[0.25rem]">
+            <span className="text-[#3a3e41]">English</span>
+          </div>
+        </nav>
+        <nav className="bg-[#c30a17] text-white relative w-full flex h-[3.25rem] gap-[1rem] px-2 lg:hidden">
           {/* nav item */}
           <div className="flex gap-[1rem] items-center  tracking-[.5px] ">
             <img src="/menu.svg" alt="" className="h-[1.25rem] w-[1.25rem] " />
@@ -22,8 +37,50 @@ export default function Home() {
           </div>
         </nav>
         <div className="px-2">
+          <div className="relative flex items-center gap-5">
+            <div className="pt-[0.625rem] hidden lg:block w-[260px] relative after:bg-[#c30a17] after:w-full after:max-h-[19rem] after:min-h-[16rem] after:absolute after:-top-[190%] after:left-0">
+              <div className="flex w-full items-center justify-center">
+                <img
+                  src="/logo-transparent.svg"
+                  alt=""
+                  className="relative z-50"
+                />
+              </div>
+            </div>
+
+            <nav className="bg-[#c30a17] text-white relative w-full hidden h-[3.25rem] gap-[1rem] px-2 lg:flex">
+              {/* nav item */}
+              <div className="flex gap-[1rem] items-center  tracking-[.5px] ">
+                <span className="text-[1.2rem]">Port­fo­lio</span>
+              </div>
+              {/* nav item */}
+              <div className="flex gap-[0.5rem] items-center  tracking-[.5px]">
+                <span className="text-[1.2rem]">Search</span>
+              </div>
+              {/* nav item */}
+              <div className="flex gap-[0.5rem] items-center  tracking-[.5px]">
+                <span className="text-[1.2rem]">In­dus­tries</span>
+              </div>
+              {/* nav item */}
+              <div className="flex gap-[0.5rem] items-center  tracking-[.5px]">
+                <span className="text-[1.2rem]">Cus­tomers</span>
+              </div>
+              {/* nav item */}
+              <div className="flex gap-[0.5rem] items-center  tracking-[.5px]">
+                <span className="text-[1.2rem]">About us</span>
+              </div>
+              {/* nav item */}
+              <div className="flex gap-[0.5rem] items-center  tracking-[.5px]">
+                <span className="text-[1.2rem]">Events</span>
+              </div>
+              {/* nav item */}
+              <div className="flex gap-[0.5rem] items-center  tracking-[.5px]">
+                <span className="text-[1.2rem]">Ca­reers</span>
+              </div>
+            </nav>
+          </div>
           <div className="">
-            <div className="pt-[0.625rem]">
+            <div className="pt-[0.625rem] lg:hidden">
               <img
                 src="/logo-small.svg"
                 alt=""
@@ -45,13 +102,13 @@ export default function Home() {
               <div className="mt-[30px] flex flex-col gap-4 justify-around">
                 <div className="bg-[#c30a17] text-white p-[1.25rem] md:w-[296px]">
                   Portfolio
-                </div>      
+                </div>
                 <div className="bg-[#c30a17] text-white p-[1.25rem] md:w-[296px]">
                   About us
-                </div>      
+                </div>
                 <div className="bg-[#c30a17] text-white p-[1.25rem] md:w-[296px]">
                   Careers
-                </div>                
+                </div>
               </div>
             </div>
           </div>

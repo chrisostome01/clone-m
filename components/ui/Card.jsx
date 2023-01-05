@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Card() {
   return (
     <div className="inline-grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
